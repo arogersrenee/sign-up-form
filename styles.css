@@ -95,7 +95,14 @@ svg {
 }
 
 .photo-credit {
-    color: #fff;
+    color: #d0e5b5;
+    font-size: 0.8rem;
+    font-weight: var(--fw-semi);
+
+}
+
+.background a {
+    color: inherit;
 }
 
 .form-section {
@@ -114,7 +121,6 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: var(--fw-semi);
-    margin-bottom: 1.5rem;
 }
 
 .content > p {
@@ -219,13 +225,13 @@ button + p {
     font-size: 0.75rem;
 }
 
-a {
+.submit-section a {
     color: rgb(65, 84, 4);
     font-weight: var(--fw-semi);
     text-decoration: none;
 }
 
-a:hover {
+.submit-section a:hover {
     color: rgb(94, 112, 34);
 }
 
