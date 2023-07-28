@@ -58,7 +58,10 @@ table {
 
     --fw-light: 300;
     --fw-regular: 400;
-    --fw-semi: 600
+    --fw-semi: 600;
+
+    --clr-invalid: rgb(200, 0, 0);
+    --clr-valid: rgb(18, 176, 0);
 
 }
 
@@ -88,8 +91,7 @@ main {
 
 svg {
     width: 6rem;
-    fill: #ffffff;
-    opacity: 0.5;
+    fill: #000;
 }
 
 .photo-credit {
@@ -129,12 +131,72 @@ h2 {
 section {
     background-color: #fff;
     margin: 2rem 0;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
+    display: grid;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .content,
 .submit-section {
     padding-left: 1.5rem;
+}
+
+input {
+    appearance: none;
+    font-family: inherit;
+    font-size: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0.125rem;
+    padding: 0.5rem;
+    width: 15rem;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid var(--clr-invalid);
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+    border: 1px solid var(--clr-valid);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid ~ .error {
+    display: block;
+}
+
+input:focus {
+    outline: 2px solid #0285ff;
+}
+
+input::placeholder {
+    font-size: 0.8rem;
+}
+
+
+.form-row {
+    display: flex;
+    gap: 3rem;
+}
+
+.form-row > p {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    padding-bottom: 0.25rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: var(--fw-semi);
+    letter-spacing: 0.055rem;
+    color: #555;
+}
+
+.pwd-minimum {
+    font-size: 0.6rem;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 button {
@@ -166,3 +228,28 @@ a {
 a:hover {
     color: rgb(94, 112, 34);
 }
+
+.error {
+    display: none;
+    font-size: 0.7rem;
+    margin-top: 0.25rem;
+    color: var(--clr-invalid);
+}
+
+/* .hidden {
+    display: none;
+} */
+
+
+
+
+
+
+/* || Notes
+
+Helpful for styling form validation focus/valid/invald
+https://www.bram.us/2021/01/28/form-validation-you-want-notfocusinvalid-not-invalid/
+
+Another resource for styling forms
+https://internetingishard.netlify.app/html-and-css/forms/index.html
+*/
