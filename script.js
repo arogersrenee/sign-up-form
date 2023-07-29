@@ -3,10 +3,9 @@ const pwdError = document.querySelector('#password + span');
 const pwdConfirmation = document.getElementById('confirmation');
 const confirmationError = document.querySelector('#confirmation + span');
 
-
+//confirm password after user stops typing. 
 let timer;
 const waitTime = 1000;
-
 
 pwdConfirmation.addEventListener('keyup', () => {
   timer = setTimeout(() => {
@@ -15,24 +14,23 @@ pwdConfirmation.addEventListener('keyup', () => {
 });
 
 pwdConfirmation.addEventListener('keypress', () => {
-    clearTimeout(timer); //what is this function? 
-    comparePwd();
-
+    clearTimeout(timer); 
   });
 
-
 function comparePwd() {
-if (pwdConfirmation.value) {
-    if (pwd.value != pwdConfirmation.value) {
+if(pwdConfirmation.value) {
+    if(pwd.value != pwdConfirmation.value) {
         confirmationError.style.display = 'block';
         pwdConfirmation.style.border = "1px solid rgb(200, 0, 0)"
-        // e.preventDefault()
-        // return false
+        confirmationError.style.color = 'rgb(200, 0, 0)';
+        confirmationError.innerHTML = 'Password does not match'
+        return false
     } else {
             confirmationError.style.display = 'block'
             pwdConfirmation.style.border = "1px solid rgb(18, 176, 0)";
             confirmationError.style.color = 'rgb(18, 176, 0)'
             confirmationError.innerHTML = "It's a match!"
+            return true
         }
 } else {
     confirmationError.style.display = 'none'
