@@ -139,7 +139,6 @@ section {
     margin: 2rem 0;
     padding: 1.5rem;
     display: grid;
-    flex-direction: column;
     gap: 1.5rem;
 }
 

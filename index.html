@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ashley Rogers | TOP - Sign-up Form</title>
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
+
 <body>
     <main>
         <div class="background">
@@ -27,13 +29,19 @@
                     d="M24.8,24.1c2.09-5.69,10.66-2.76,7.42,1.92-1.08,1.55-6,3.05-7,3.78-2.83,2,.07,6.12,2.26,2.79.08-.13.4-.14.44,0a17.39,17.39,0,0,1-.71,2.12,1.17,1.17,0,0,1-.6.48c-5,1.85-8-4.26-2.36-6.75,2.07-.92,4.74-1.08,5.71-4.33.78-2.61-2.4-2.77-2.79.13-.42,3.11-3.1,2-2.32-.16"
                     transform="translate(-12.4 -12.46)" />
             </svg>
-            <p class="photo-credit">Photo credit: <a href="https://unsplash.com/@kopidanny">Daniel Koponyas</a></p>
+            <p class="photo-credit">
+                Photo credit:
+                <a href="https://unsplash.com/@kopidanny">Daniel Koponyas</a>
+            </p>
         </div>
         <div class="form-section">
             <div class="content">
                 <h1>Practice Form</h1>
-                <p>This is not a real online service! You know you need something like this in your life to help you realize
-                    your deepest dreams. <br> Sign up <span class="italic">now</span> to get started</p>
+                <p>
+                    This is not a real online service! You know you need something like this
+                    in your life to help you realize your deepest dreams. <br />
+                    Sign up <span class="italic">now</span> to get started
+                </p>
                 <p>You <span class="italic">know</span> you want to.</p>
             </div>
             <div class="form">
@@ -43,49 +51,55 @@
                         <div class="name form-row">
                             <p>
                                 <label for="first-name">First Name<span aria-label="requried">*</span></label>
-                                <input type="text" id="first-name" placeholder="First Name" name="fname" required>
+                                <input type="text" id="first-name" placeholder="First Name" name="fname" required />
                                 <span class="error" aria-live="polite">First name is required</span>
                             </p>
                             <p>
                                 <label for="last-name">Last Name<span aria-label="requried">*</span></label>
-                                <input type="text" id="last-name" placeholder="Last Name" name="lname" required>
+                                <input type="text" id="last-name" placeholder="Last Name" name="lname" required />
                                 <span class="error" aria-live="polite">Last name is required</span>
                             </p>
                         </div>
                         <div class="contact form-row">
                             <p>
                                 <label for="email">Email Address<span aria-label="requried">*</span></label>
-                                <input type="email" id="email" placeholder="hello@youremail.com" name="email" required>
+                                <input type="email" id="email" placeholder="hello@youremail.com" name="email"
+                                    required />
                                 <span class="error" aria-live="polite">Enter a valid password</span>
                             </p>
                             <p>
                                 <label for="phone">Phone Number</label>
-                                <input type="text" id="phone" placeholder="123-456-7890" name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-                            <span class="error" aria-live="polite">Format: 123-456-7890</span>
+                                <input type="text" id="phone" placeholder="123-456-7890" name="phone"
+                                    pattern="\d{3}[\-]\d{3}[\-]\d{4}" />
+                                <span class="error" aria-live="polite">Format: 123-456-7890</span>
                             </p>
                         </div>
                         <div class="password form-row">
                             <p>
                                 <label for="password">Password<span aria-label="requried">*</span></label>
                                 <input type="password" id="password" placeholder="Enter password" name="password"
-                                    pattern="^[A-Za-z\d]{8,}$" title="Password must be at least 8 characters">
+                                    pattern="^[A-Za-z\d]{8,}$" title="Password must be at least 8 characters" />
                                 <span class="error" aria-live="polite">Must be atleast 8 characters</span>
                             </p>
                             <p>
                                 <label for="confirmation">Confirm Password<span aria-label="requried">*</span></label>
-                                <input type="password" id="confirmation" placeholder="Confirm password" name="confirmation">
+                                <input type="password" id="confirmation" placeholder="Confirm password"
+                                    name="confirmation" />
                                 <span class="error" aria-live="polite"></span>
                             </p>
                         </div>
                     </section>
                     <div class="submit-section">
                         <button type="submit">Create Account</button>
-                        <p>Already have an account? <span><a href="#">Log in</a></span></p>
+                        <p>
+                            Already have an account? <span><a href="#">Log in</a></span>
+                        </p>
                     </div>
                 </form>
-        </div>
+            </div>
         </div>
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
